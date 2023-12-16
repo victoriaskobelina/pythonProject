@@ -7,7 +7,7 @@ def sum_of_digits(number):
         number //= 10  # удаляем последнюю цифру числа
     return sum
 
-def steps_to_zero(number):
+def steps_to_zero(number): #шаги к нулю
     steps = 0
     while number != 0:
         number -= sum_of_digits(number)

@@ -10,3 +10,4 @@ if figure == '1':
     rectangle()
 elif figure == '2':
     triangle()
+
