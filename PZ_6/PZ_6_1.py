@@ -1,6 +1,6 @@
 #Дан список A размера N. Найти максимальный элемент
 #из его элементов с нечетными номерами: A1, A3, A5, ... .
-def find_max_odd_elements(A):
+def max_elements(A):
     max_element = float('-inf')  #максимальный элемент как отрицательную бесконечность
     for i in range(len(A)):
         try:
@@ -11,6 +11,6 @@ def find_max_odd_elements(A):
             return None
     return max_element
 A = [1, 5, 2, 3, 8, 4, 7, 6, 4]
-result = find_max_odd_elements(A)
+result = find_elements(A)
 if result is not None:
     print("Максимальный элемент с нечетными индексами:", result)
