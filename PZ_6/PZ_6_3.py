@@ -6,9 +6,9 @@
 #Для хранения данных о каждом наборе точек следует использовать по два списка: первый список для хранения абсцисс,
 #второй — для хранения ординат.
 import math
-def find_smallest_perimeter(A):
+def find_perimeter(A):
     min_perimeter = float('inf')  # Инициализируем минимальный периметр как положительную бесконечность
-    smallest_triangle = []  # Список для хранения точек треугольника с наименьшим периметром
+    triangle = []  # Список для хранения точек треугольника с наименьшим периметром
     for i in range(len(A)):
         for j in range(i+1, len(A)):
             for k in range(j+1, len(A)):
@@ -21,8 +21,8 @@ def find_smallest_perimeter(A):
                 # Если текущий периметр меньше минимального, обновляем минимальный периметр и точки треугольника
                 if perimeter < min_perimeter:
                     min_perimeter = perimeter
-                    smallest_triangle = [A[i], A[j], A[k]]
-    return min_perimeter, smallest_triangle
+                    triangle = [A[i], A[j], A[k]]
+    return min_perimeter, triangle
 N = int(input("Введите количество точек в множестве A: "))
 if N > 2:
     A = []
