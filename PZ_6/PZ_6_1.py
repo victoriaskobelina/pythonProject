@@ -11,6 +11,6 @@ def max_elements(A):
             return None
     return max_element
 A = [1, 5, 2, 3, 8, 4, 7, 6, 4]
-result = find_elements(A)
+result = max_elements(A)
 if result is not None:
     print("Максимальный элемент с нечетными индексами:", result)

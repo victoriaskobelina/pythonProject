@@ -11,7 +11,7 @@ def create_list_B(A):
         return None
     return B
 try:
-    A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    A = [10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     B = create_list_B(A)
 
     if B is not None:

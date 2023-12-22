@@ -30,7 +30,7 @@ if N > 2:
         x = int(input("Введите абсциссу точки: "))
         y = int(input("Введите ординату точки: "))
         A.append((x, y))
-    perimeter, triangle = find_smallest_perimeter(A)
+    perimeter, triangle = find_perimeter(A)
     print("Наименьший периметр треугольника:", perimeter)
     print("Точки треугольника:", triangle)
 else:
