@@ -17,4 +17,4 @@ if russian_word in dictionary:
     translation = dictionary[russian_word]
     print("Перевод слова", russian_word, "на английский:", translation)
 else:
-    print("Данного слова нет в словаре")
+    print("Данного слова, к сожалению, нет в словаре")
