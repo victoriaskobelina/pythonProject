@@ -9,3 +9,13 @@ magistr = {'Лермонтов', 'Достовевский', 'Пушкин', 'Т
 house_of_books = {'Толстой', 'Грибоедов', 'Чехов', 'Пушкин'}
 bookmarket = {'Пушкин', 'Достоевкий', 'Маяковский'}
 gallery = {'Чехов', 'Тютчев', 'Пушкин'}
+shops = set()
+if 'Пушкин' in magistr and 'Тютчев' in magistr:
+    shops.add('Магистр')
+if 'Пушкин' in house_of_books and 'Тютчев' in house_of_books:
+    shops.add('ДомКниги')
+if 'Пушкин' in bookmarket and 'Тютчев' in bookmarket:
+    shops.add('БукМаркет')
+if 'Пушкин' in gallery and 'Тютчев' in gallery:
+    shops.add('Галерея')
+print("Книги Пушкина и Тютчева можно приобрести в следующих магазинах:", shops)
