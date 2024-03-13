@@ -1,11 +1,12 @@
 #В матрице элементы последней строки заменить на 0.
 import random
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-for i in range(len(matrix[-1])):
-    matrix[-1][i] = 0
+rows = 3
+cols = 3
+matrix = [[random.randint(1, 10) for j in range(cols)] for i in range(rows)]
+print("Изначальная матрица: ")
+for row in matrix:
+    print(row)
+matrix[-1] = [0 for _ in range(cols)]
+print("Изменённая матрица: ")
 for row in matrix:
     print(row)
