@@ -6,11 +6,12 @@ matrix = [[random.randint(1, 10) for j in range(cols)] for i in range(rows)]
 print("Изначальная матрица: ")
 for row in matrix:
     print(row)
-number = int(input("Введите номер столбца для увеличения: "))
+number = int(input("Введите номер столбца для увеличения в два раза: "))
 #увеличение элементов столбца в два раза
 for i in range(len(matrix)):
     matrix[i][number - 1] *= 2
 #вывод измененной матрицы
+print("Изменённая матрица: ")
 for row in matrix:
     print(row)
 
