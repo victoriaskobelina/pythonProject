@@ -8,9 +8,8 @@ for row in matrix:
     print(row)
 number = int(input("Введите номер столбца для увеличения в два раза: "))
 #увеличение элементов столбца в два раза
-for i in range(len(matrix)):
+for i in range(len(matrix)): #лянда мэп
     matrix[i][number - 1] *= 2
-#вывод измененной матрицы
 print("Изменённая матрица: ")
 for row in matrix:
     print(row)
