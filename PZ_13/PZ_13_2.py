@@ -8,8 +8,9 @@ for row in matrix:
     print(row)
 number = int(input("Введите номер столбца для увеличения в два раза: "))
 #увеличение элементов столбца в два раза
-for i in range(len(matrix)): #лянда мэп
-    matrix[i][number - 1] *= 2
+matrix = list(map(lambda row, idx: [elem * 2 if idx == number - 1 else elem for idx, elem in enumerate(row)], matrix, range(len(matrix))))
+#for i in range(len(matrix)): #лянда мэп
+#    matrix[i][number - 1] *= 2
 print("Изменённая матрица: ")
 for row in matrix:
     print(row)
