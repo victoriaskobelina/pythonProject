@@ -1,6 +1,16 @@
-s= open('pr.txt').readline()
-k=0
-for i in range (len(s)):
-    if s[i].isdigit():
-        k+=1
+k = 0
+f = 4 ** 2 + 10 ** 2
+f = f // 3
+while f > 0:
+    f = f // 3
+if f % 3 == 2:
+    k += 1
 print (k)
+
+f = (4**2) + (10**2)
+k = 0
+while f > 0:
+    if f % 3 == 2:
+        k += 1
+    f //= 3
+print(f"Количество цифр 2 в троичной записи значения {(4**2) + (10**2)} равно {k}")

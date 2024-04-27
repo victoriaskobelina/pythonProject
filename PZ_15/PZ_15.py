@@ -3,7 +3,6 @@
 #пол, название стрижки, стоимость.
 import sqlite3 as sq
 from salon import info_salon
-
 with sq.connect('salon.db') as con:
     cur = con.cursor()
     cur.execute("DROP TABLE IF EXISTS services")
