@@ -55,6 +55,3 @@ with sq.connect('saper.db') as con:
     cur.execute("SELECT * FROM users WHERE sex = 2 ")
     result = cur.fetchall()
     print(result)
-
-
-
