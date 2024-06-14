@@ -16,7 +16,6 @@ class Cat(Animal):
         super().__init__(species, age)
         self.breed = breed
 
-# Пример использования классов
 dog = Dog("Собака", 3, "Лабрадор")
 cat = Cat("Кошка", 5, "Персидская")
 
