@@ -67,7 +67,7 @@ def submit():
 #ОСНОВНЫЕ ЭЛЕМЕНТЫ
 root = tk.Tk()
 root.title("Sign Up")
-root.geometry("560x660+700+400")
+root.geometry("560x850+700+400")
 root.protocol('WM_DELETE_WINDOW', window_deleted)  #обработчик закрытия окна
 root.resizable(False, False)  #размер окна не изменяется
 root.config(bg="#de8704")
