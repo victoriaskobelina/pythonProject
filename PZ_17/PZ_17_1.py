@@ -14,31 +14,24 @@ def cancel():
     entry_first_name.delete(0, tk.END)
     entry_first_name.config(fg='Black')
     focus_out_entry_box(entry_first_name, entry_first_name_text)
-
     entry_last_name.delete(0, tk.END)
     entry_last_name.config(fg='Black')
     focus_out_entry_box(entry_last_name, entry_last_name_text)
-
     entry_screen_name.delete(0, tk.END)
     entry_screen_name.config(fg='Black')
     focus_out_entry_box(entry_screen_name, entry_screen_name_text)
-
     entry_email.delete(0, tk.END)
     entry_email.config(fg='Black')
     focus_out_entry_box(entry_email, entry_email_text)
-
     entry_phone.delete(0, tk.END)
     entry_phone.config(fg='Black')
     focus_out_entry_box(entry_phone, entry_phone_text)
-
     entry_password.delete(0, tk.END)
     entry_confirm_password.delete(0, tk.END)
-
     default_month.set(month_list[0])
     default_day.set(day_list[0])
     default_year.set("1985")
     default_country.set(country_list[0])
-
     radio_button_male.config(variable=tk.StringVar())
     radio_button_female.config(variable=tk.StringVar())
     checkbutton_terms_of_use.config(variable=tk.BooleanVar(value=False))
@@ -74,21 +67,18 @@ def submit():
 #ОСНОВНЫЕ ЭЛЕМЕНТЫ
 root = tk.Tk()
 root.title("Sign Up")
-root.geometry("560x660+700+400")  # ширина=500, высота=400, x=300, y=200
-root.protocol('WM_DELETE_WINDOW', window_deleted)  # обработчик закрытия окна
-root.resizable(False, False)  # размер окна НЕ может быть изменён
+root.geometry("560x660+700+400")
+root.protocol('WM_DELETE_WINDOW', window_deleted)  #обработчик закрытия окна
+root.resizable(False, False)  #размер окна не изменяется
 root.config(bg="#de8704")
-
 for i in range(10):
     root.columnconfigure(index=i, weight=1)
 for i in range(23):
     root.rowconfigure(index=i, weight=1)
-
 main_title_label = tk.Label(root, text='Sign Up', bg="#de8704", fg="#fde82d", font=("Arial", 16))
 main_frame = tk.Frame(root, bg='#222536', bd=5)
 cancel_button = tk.Button(root, text='Cancel', font=("Arial", 11, "bold"), background="red", foreground="white", command=cancel)
 submit_button = tk.Button(root, text='Submit', font=("Arial", 11, "bold"), background="green", foreground="white", command=submit)
-
 main_title_label.place(x=10, y=4)
 main_frame.grid(row=1, column=0, columnspan=11, rowspan=22, padx=0, pady=12, sticky="nsew")
 cancel_button.grid(row=23, column=9, columnspan=1, ipadx=4, ipady=4, padx=0, pady=12)
@@ -97,34 +87,24 @@ submit_button.grid(row=23, column=10, columnspan=1, ipadx=4, ipady=4, padx=12, p
 #ЯРЛЫКИ ДЛЯ ПОЛЕЙ
 first_name_label = tk.Label(root, text='First Name', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 first_name_label.grid(row=1, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 last_name_label = tk.Label(root, text='Last Name', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 last_name_label.grid(row=3, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 screen_name_label = tk.Label(root, text='Screen Name', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 screen_name_label.grid(row=5, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 date_of_birth_label = tk.Label(root, text='Date Of Birth', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 date_of_birth_label.grid(row=7, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 gender_label = tk.Label(root, text='Gender', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 gender_label.grid(row=9, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 country_label = tk.Label(root, text='Country', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 country_label.grid(row=11, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 email_label = tk.Label(root, text='E-mail', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 email_label.grid(row=13, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 phone_label = tk.Label(root, text='Phone', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 phone_label.grid(row=15, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 password_label = tk.Label(root, text='Password', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 password_label.grid(row=17, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 confirm_password_label = tk.Label(root, text='Confirm Password', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 confirm_password_label.grid(row=19, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
-
 
 #ПОЛЯ ДЛЯ ЗАПОЛНЕНИЯ
 def focus_out_entry_box(widget, widget_text):
@@ -132,7 +112,6 @@ def focus_out_entry_box(widget, widget_text):
         widget.delete(0, tk.END)
         widget['fg'] = 'Grey'
         widget.insert(0, widget_text)
-
 def focus_in_entry_box(widget):
     if widget['fg'] == 'Grey':
         widget['fg'] = 'Black'
@@ -183,28 +162,20 @@ entry_confirm_password.grid(row=19, column=5, columnspan=6, rowspan=2, padx=6, p
 #ПОЛЯ С ВЫБОРОМ
 month_list = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December "]
 default_month = tk.StringVar(value=month_list[0])
-
 day_list = [str(i) for i in range(1, 32)]
 default_day = tk.StringVar(value=day_list[0])
-
 year_list = [str(i) for i in range(1900, 2025)]
 default_year = tk.StringVar(value="1985")
-
 country_list = ["USA", "Russian Federation", "Canada", "China", "Brazil", "Australia", "India", "Other"]
 default_country = tk.StringVar(value=country_list[0])
-
 combo_box_month = ttk.Combobox(root, values=month_list, textvariable=default_month, font='Arial 10 bold')
 combo_box_month.grid(row=7, column=5, columnspan=4, rowspan=2, padx=6, pady=0, sticky="we")
-
 combo_box_day = ttk.Combobox(root, values=day_list, textvariable=default_day, font='Arial 11', width=5)
 combo_box_day.grid(row=7, column=9, columnspan=1, rowspan=2, padx=6, pady=0, sticky="we")
-
 combo_box_year = ttk.Combobox(root, values=year_list, textvariable=default_year, font='Arial 11', width=5)
 combo_box_year.grid(row=7, column=10, columnspan=2, rowspan=2, padx=6, pady=0, sticky="we")
-
 combo_box_country = ttk.Combobox(root, values=country_list, textvariable=default_country, font='Arial 10 bold')
 combo_box_country.grid(row=11, column=5, columnspan=6, rowspan=2, padx=6, pady=0, sticky="we")
-
 
 #КНОПКИ ДЛЯ ВЫБОРА
 male = "Male"
@@ -212,17 +183,13 @@ female = "Female"
 gender = tk.StringVar()
 gender_style = ttk.Style()
 gender_style.configure("BW.TRadiobutton", font=("Arial", 9), background="#222536", border=0, foreground="#fde82d")
-
 radio_button_male = ttk.Radiobutton(root, text="Male", value="male", variable=gender, style="BW.TRadiobutton")
 radio_button_male.grid(row=9, column=5, columnspan=3, rowspan=2, padx=6, pady=0, sticky="w")
-
 radio_button_female = ttk.Radiobutton(root, text="Female", value="female", variable=gender, style="BW.TRadiobutton")
 radio_button_female.grid(row=9, column=8, columnspan=3, rowspan=2, padx=6, pady=0, sticky="w")
-
 terms_agree = tk.BooleanVar(value=False)
 terms_style = ttk.Style()
 terms_style.configure("BW.TCheckbutton", font=("Arial", 9), background="#222536", border=0, foreground="#fde82d")
-
 checkbutton_terms_of_use = ttk.Checkbutton(root, text="I agree to the Terms of Use", variable=terms_agree, style="BW.TCheckbutton")
 checkbutton_terms_of_use.grid(row=21, column=5, columnspan=6, rowspan=1, padx=6, pady=0, sticky="w")
 

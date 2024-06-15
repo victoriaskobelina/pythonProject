@@ -22,22 +22,17 @@ root.title("Расчет цен на шоколадные конфеты и ир
 tk.Label(root, text="Введите, пожалуйста, сколько x-кг шоколадных конфет:").pack()
 entry_x = tk.Entry(root)
 entry_x.pack()
-
 tk.Label(root, text="Введите, пожалуйста, цену a за них:").pack()
 entry_a = tk.Entry(root)
 entry_a.pack()
-
 tk.Label(root, text="Введите, пожалуйста, сколько y-кг ирисок:").pack()
 entry_y = tk.Entry(root)
 entry_y.pack()
-
 tk.Label(root, text="Введите, пожалуйста, цену b за них:").pack()
 entry_b = tk.Entry(root)
 entry_b.pack()
-
 calculate_button = tk.Button(root, text="Рассчитать", command=calculate_price)
 calculate_button.pack()
-
 result_label = tk.Label(root, text="")
 result_label.pack()
 

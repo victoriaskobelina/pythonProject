@@ -16,13 +16,13 @@ class Cat(Animal):
         super().__init__(species, age)
         self.breed = breed
 
-dog = Dog("Собака", 3, "Лабрадор")
-cat = Cat("Кошка", 5, "Персидская")
+dog = Dog("Собака", 3, "Доберман")
+cat = Cat("Кошка", 5, "Манчкин")
 
-print("Вид собаки:", dog.species)
+print("Вид животного:", dog.species)
 print("Возраст собаки:", dog.age)
 print("Порода собаки:", dog.breed)
 
-print("Вид кошки:", cat.species)
+print("Вид животного:", cat.species)
 print("Возраст кошки:", cat.age)
 print("Порода кошки:", cat.breed)
