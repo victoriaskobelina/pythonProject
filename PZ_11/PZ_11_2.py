@@ -3,18 +3,26 @@
 #стихотворной форме предварительно вставив после строки N (N – задается пользователем)
 #произвольную фразу
 #Чтение содержимого текстового файла и подсчет количества символов
-with open('text18-28.txt', 'r') as file:
+import chardet
+#определение кодировки файла
+with open('text18-28.txt', 'rb') as file:
+    rawdata = file.read()
+    result = chardet.detect(rawdata)
+    encoding = result['encoding']
+#чтение содержимого файла с учетом определенной кодировки
+with open('text18-28.txt', 'r', encoding=encoding) as file:
     content = file.read()
     count = len(content)
     print("Содержимое файла:")
     print(content)
     print("Количество символов в тексте:", count)
-#Запрос пользователя для вставки фразы после строки N
+#запрос пользователя для вставки фразы после строки N
 N = int(input("Введите номер строки, после которой нужно вставить фразу: "))
 phrase = input("Введите произвольную фразу для вставки: ")
-#Формирование нового файла с текстом в стихотворной форме и вставкой фразы после строки N
+#формирование нового файла с текстом в стихотворной форме и вставкой фразы после строки N
 lines = content.split('\n')
 new_content = '\n'.join(lines[:N] + [phrase] + lines[N:])
-with open('new_text.txt', 'w') as new_file:
+#запись нового содержимого в файл
+with open('new_text.txt', 'w', encoding=encoding) as new_file:
     new_file.write(new_content)
-print("Текст сохранен в новом файле new_text.txt")
+print("Текст успешно сохранен в новом файле new_text.txt.")

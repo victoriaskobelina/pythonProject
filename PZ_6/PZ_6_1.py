@@ -4,7 +4,7 @@ def max_elements(A):
     max_element = float('-inf')  #максимальный элемент как отрицательную бесконечность
     for i in range(len(A)):
         try:
-            if i % 2 != 0 and A[i] > max_element:  # Проверяем нечетный индекс и обновляем максимальный элемент
+            if i % 2 != 0 and A[i] > max_element:  #проверяем нечетный индекс и обновляем максимальный элемент
                 max_element = A[i]
         except IndexError:
             print("Индекс выходит за границы списка.")
