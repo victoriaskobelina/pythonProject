@@ -64,12 +64,12 @@ def submit():
     print("\n")
     cancel()
 
-#ОСНОВНЫЕ ЭЛЕМЕНТЫ
+#основные части (элементы)
 root = tk.Tk()
 root.title("Sign Up")
 root.geometry("560x850+700+400")
-root.protocol('WM_DELETE_WINDOW', window_deleted)  #обработчик закрытия окна
-root.resizable(False, False)  #размер окна не изменяется
+root.protocol('WM_DELETE_WINDOW', window_deleted)
+root.resizable(False, False)
 root.config(bg="#de8704")
 for i in range(10):
     root.columnconfigure(index=i, weight=1)
@@ -84,7 +84,7 @@ main_frame.grid(row=1, column=0, columnspan=11, rowspan=22, padx=0, pady=12, sti
 cancel_button.grid(row=23, column=9, columnspan=1, ipadx=4, ipady=4, padx=0, pady=12)
 submit_button.grid(row=23, column=10, columnspan=1, ipadx=4, ipady=4, padx=12, pady=12)
 
-#ЯРЛЫКИ ДЛЯ ПОЛЕЙ
+#названия полей
 first_name_label = tk.Label(root, text='First Name', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 first_name_label.grid(row=1, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
 last_name_label = tk.Label(root, text='Last Name', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
@@ -106,7 +106,7 @@ password_label.grid(row=17, column=0, columnspan=4, rowspan=2, padx=0, pady=0, s
 confirm_password_label = tk.Label(root, text='Confirm Password', bg="#222536", fg="#fde82d", font=("Arial", 11, "bold"))
 confirm_password_label.grid(row=19, column=0, columnspan=4, rowspan=2, padx=0, pady=0, sticky="e")
 
-#ПОЛЯ ДЛЯ ЗАПОЛНЕНИЯ
+#поля для заполнения
 def focus_out_entry_box(widget, widget_text):
     if widget['fg'] == 'Black' and len(widget.get()) == 0:
         widget.delete(0, tk.END)
@@ -159,7 +159,7 @@ entry_confirm_password = tk.Entry(root, font='Arial 11')
 entry_confirm_password.grid(row=19, column=5, columnspan=6, rowspan=2, padx=6, pady=0, sticky="we")
 
 
-#ПОЛЯ С ВЫБОРОМ
+#поля с выбором
 month_list = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December "]
 default_month = tk.StringVar(value=month_list[0])
 day_list = [str(i) for i in range(1, 32)]
@@ -177,7 +177,7 @@ combo_box_year.grid(row=7, column=10, columnspan=2, rowspan=2, padx=6, pady=0, s
 combo_box_country = ttk.Combobox(root, values=country_list, textvariable=default_country, font='Arial 10 bold')
 combo_box_country.grid(row=11, column=5, columnspan=6, rowspan=2, padx=6, pady=0, sticky="we")
 
-#КНОПКИ ДЛЯ ВЫБОРА
+#кнопки для выбора
 male = "Male"
 female = "Female"
 gender = tk.StringVar()
